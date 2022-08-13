@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+  min-width: 768px;
+  background-color: var(--app-background-color);
+  position: relative;
+  overflow-x: hidden;
+  color-scheme: dark;
+  /* overflow-y: hidden; */
+}
+
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url(./fonts/Gotham-Medium.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate.force {
+  display: block;
+}
+
+:root {
+  --dark-color: #000000;
+  --darker-color: #121212;
+  --darkest-color: #181818;
+  --light-color: #ffffff;
+  --lighter-color: #ffffff;
+  --lightest-color: #ffffff;
+  --app-background-color: var(--darker-color);
+  --sidebar-background-color: var(--dark-color);
+  --header-background-color: var(--darkest-color);
+  --footer-background-color: var(--darkest-color);
+  --header-height: 64px;
+  --sidebar-width: 240px;
+  --footer-height: 90px;
+  --main-width: calc(100% - var(--sidebar-width));
+  --wrapper-height: calc(100% - var(--footer-height));
+}
