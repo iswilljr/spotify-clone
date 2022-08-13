@@ -7,10 +7,14 @@ export default function usePlaylist(id: string) {
 
   useEffect(() => {
     (async () => {
+      if (!id) return;
       if (!session && !spotify.getAccessToken()) return setPlaylist(false);
       const { body } = await spotify.getPlaylist(id);
       setPlaylist(body);
-    })().catch(() => setPlaylist(false));
+    })().catch(() => {
+      setPlaylist(false);
+      console.log("error");
+    });
   }, [session, spotify, id]);
 
   return playlist;
