@@ -55,7 +55,7 @@ export default function Playlist() {
                     <span>{playlist.tracks.total} songs</span>
                     {", "}
                     <span className="gray">
-                      {ms(playlist.tracks.items.reduce((acc, item) => acc + (item.track?.duration_ms || 0), 0) || 0, {
+                      {ms(playlist.tracks.items.reduce((acc, item) => acc + (item.track?.duration_ms ?? 0), 0) ?? 0, {
                         long: true,
                       })}
                     </span>
@@ -78,13 +78,13 @@ export default function Playlist() {
                 </div>
               </div>
               {playlist.tracks.items.map(({ track }, index) => (
-                <div key={track?.id || index} className={classes.track}>
+                <div key={track?.id ?? index} className={classes.track}>
                   <div className={classes.th}>{index + 1}</div>
                   <div className={cx(classes.th, classes.info)}>
                     <Playing track={track} imageSize={40} width="100%" noLikeButton buttonClassName="" />
                   </div>
                   <div className={cx(classes.th, classes.info)}>{track?.album.name}</div>
-                  <div className={classes.th}>{msToDuration(track?.duration_ms || 0)}</div>
+                  <div className={classes.th}>{msToDuration(track?.duration_ms ?? 0)}</div>
                 </div>
               ))}
             </div>

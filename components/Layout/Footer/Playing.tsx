@@ -5,13 +5,13 @@ import { HeartIcon } from "components/icons/Heart";
 const useStyles = createStyles((theme, { width, imageSize }: { width?: string | number; imageSize?: number }) => ({
   control: {
     minWidth: width ? undefined : "180px",
-    width: width || "30%",
+    width: width ?? "30%",
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
     position: "relative",
   },
-  image: { width: imageSize || 56, height: imageSize || 56 },
+  image: { width: imageSize ?? 56, height: imageSize ?? 56 },
   info: {
     display: "block",
     margin: "0 14px",
@@ -48,8 +48,8 @@ export default function Playing({ track, width, imageSize, noLikeButton, buttonC
         <>
           <div className={classes.image}>
             <img
-              width={imageSize || 56}
-              height={imageSize || 56}
+              width={imageSize ?? 56}
+              height={imageSize ?? 56}
               draggable="false"
               loading="eager"
               src={trackImageSrc}

@@ -25,7 +25,12 @@ export default function NotFound() {
         </Title>
         <div>We can&#39;t seem to find the page you are looking for.</div>
         {status === "unauthenticated" && (
-          <Button mt="md" onClick={() => signIn("spotify")}>
+          <Button
+            mt="md"
+            onClick={() => {
+              signIn("spotify").catch(() => {});
+            }}
+          >
             Login
           </Button>
         )}

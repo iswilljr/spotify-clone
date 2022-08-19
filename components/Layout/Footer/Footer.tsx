@@ -26,7 +26,7 @@ const useStyles = createStyles(() => ({
 export default function Footer() {
   const { classes } = useStyles();
   const { currentlyPlaying, recentlyPlayed, playbackState } = usePlayingState();
-  const track = currentlyPlaying || recentlyPlayed?.track;
+  const track = currentlyPlaying ?? recentlyPlayed?.track;
   const listeningState = currentlyPlaying ? "current" : recentlyPlayed ? "recent" : "undeterminated";
 
   return (

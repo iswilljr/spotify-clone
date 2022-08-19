@@ -48,7 +48,7 @@ async function refreshToken(token: any): Promise<any> {
     return {
       ...token,
       accessToken: body.access_token,
-      refreshToken: body.refresh_token || token.refreshToken,
+      refreshToken: body.refresh_token ?? token.refreshToken,
       expires_at: body.expires_in * 1000,
     };
   } catch (error: any) {

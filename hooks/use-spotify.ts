@@ -8,7 +8,7 @@ export default function useSpotify() {
   useEffect(() => {
     if (!session) return;
     if (session.error === "RefreshAccessTokenError" || Date.now() > (session.user.expires_at as number)) {
-      signIn("spotify");
+      signIn("spotify").catch(() => {});
     }
     if (!spotify.getAccessToken() && session.user.accessToken) {
       spotify.setAccessToken(session.user.accessToken);

@@ -33,7 +33,7 @@ export default function Header() {
                   <UserIcon />
                 )}
               </div>
-              <span className={classes.username}>{session.user?.name || "user"}</span>
+              <span className={classes.username}>{session.user?.name ?? "user"}</span>
               <div className={classes.iconWrapper}>
                 <DropdownIcon />
               </div>
@@ -44,7 +44,9 @@ export default function Header() {
         {status === "unauthenticated" && !session && (
           <UnstyledButton
             className={cx(classes.button, classes.login)}
-            onClick={() => signIn("spotify").catch(() => {})}
+            onClick={() => {
+              signIn("spotify").catch(() => {});
+            }}
           >
             <span className={classes.username}>login</span>
           </UnstyledButton>

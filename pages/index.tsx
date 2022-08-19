@@ -34,7 +34,7 @@ export default function Home() {
               id={playlist.id}
               image={playlist.images[0]?.url || ""}
               title={playlist.name}
-              desc={playlist.description || ""}
+              desc={playlist.description ?? ""}
             />
           ))}
         {status === "unauthenticated" && <NotFound />}

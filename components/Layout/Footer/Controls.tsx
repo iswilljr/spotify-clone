@@ -28,7 +28,7 @@ export default function Controls({ buttonClassName, state }: ControlsProps) {
       <VolumeIcon className={buttonClassName} />
       <Slider
         thumbSize={12}
-        defaultValue={state?.device.volume_percent || 100}
+        defaultValue={state?.device.volume_percent ?? 100}
         min={0}
         max={100}
         styles={{

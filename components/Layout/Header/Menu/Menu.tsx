@@ -11,7 +11,12 @@ export default function Menu({ open }: { open: boolean }) {
         external
         onClick={() => window.open("https://www.spotify.com/co/account/overview/", "_blank")}
       />
-      <MenuItem label="log out" onClick={() => signOut({})} />
+      <MenuItem
+        label="log out"
+        onClick={() => {
+          signOut().catch(() => {});
+        }}
+      />
     </ul>
   );
 }

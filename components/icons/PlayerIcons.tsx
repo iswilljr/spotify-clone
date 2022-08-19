@@ -1,8 +1,8 @@
 import { UnstyledButton } from "@mantine/core";
 
-export type PlayerIconsProps = {
+export interface PlayerIconsProps {
   className: string;
-};
+}
 
 function PlayerIcon({ icon }: { icon: React.ReactNode }) {
   const Icon = ({ className }: PlayerIconsProps) => <UnstyledButton className={className}>{icon}</UnstyledButton>;

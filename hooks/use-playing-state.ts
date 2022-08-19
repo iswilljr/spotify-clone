@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import useSpotify from "./use-spotify";
 
-type PlayingState = {
+interface PlayingState {
   currentlyPlaying: SpotifyApi.TrackObjectFull | null;
   recentlyPlayed: SpotifyApi.PlayHistoryObject | null;
   playbackState: SpotifyApi.CurrentPlaybackResponse | null;
-};
+}
 
 export default function usePlayingState(): PlayingState {
   const { spotify, session } = useSpotify();

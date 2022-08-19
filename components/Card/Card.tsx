@@ -19,7 +19,9 @@ export default function Card({ image, title, desc, id }: CardProps) {
       p="md"
       radius="md"
       className={classes.control}
-      onClick={() => router.push(`/playlist/${id}`)}
+      onClick={() => {
+        router.push(`/playlist/${id}`).catch(() => {});
+      }}
     >
       {image ? (
         <Image src={image} alt="Norway" className={classes.image} />
@@ -32,7 +34,7 @@ export default function Card({ image, title, desc, id }: CardProps) {
       <Text className="truncate">{title}</Text>
 
       <Text size="sm" color="dimmed" style={{ overflowWrap: "anywhere" }}>
-        {desc || "descrip"}
+        {desc ?? "descrip"}
       </Text>
     </MantineCard>
   );

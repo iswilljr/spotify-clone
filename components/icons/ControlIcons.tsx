@@ -1,8 +1,8 @@
 import { UnstyledButton } from "@mantine/core";
 
-export type ControlIconsProps = {
+export interface ControlIconsProps {
   className: string;
-};
+}
 
 function ControlIcon({ icon }: { icon: React.ReactNode }) {
   const Icon = ({ className }: ControlIconsProps) => <UnstyledButton className={className}>{icon}</UnstyledButton>;
