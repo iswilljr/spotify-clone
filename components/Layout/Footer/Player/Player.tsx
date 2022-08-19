@@ -64,7 +64,7 @@ export default function Player({ buttonClassName, state, track, listeningState }
             }}
           />
         </div>
-        <div className="">{msToDuration(track?.duration_ms ?? 0)}</div>
+        <div className="">{msToDuration(track?.duration_ms)}</div>
       </div>
     </div>
   );
