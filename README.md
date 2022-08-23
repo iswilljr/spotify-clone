@@ -16,7 +16,7 @@ yarn
 
 ### Env Variables
 
-`NEXT_PUBLIC_SPOTIFY_CLIENT_ID` and `NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET` are required to be able to use spotify authentication and api.
+`NEXT_PUBLIC_SPOTIFY_CLIENT_ID` and `NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET` are required to use spotify authentication and api.
 
 You can get the client id and client secret on <https://developer.spotify.com>
 
