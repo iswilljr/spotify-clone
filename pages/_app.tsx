@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         theme={{
           colorScheme: "dark",
           fontFamily: "Gotham-Medium",
+          loader: "bars",
         }}
       >
         <SessionProvider session={pageProps?.session}>

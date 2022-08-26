@@ -12,9 +12,7 @@ body {
   min-width: 768px;
   background-color: var(--app-background-color);
   position: relative;
-  overflow-x: hidden;
   color-scheme: dark;
-  /* overflow-y: hidden; */
 }
 
 @font-face {

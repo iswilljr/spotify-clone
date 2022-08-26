@@ -22,7 +22,7 @@ export default function Playlist() {
           <div
             style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}
           >
-            <Loader color="#fff" />
+            <Loader color="green" size="xl" />
           </div>
         ) : (
           <NotFound />

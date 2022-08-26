@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Avatar, Card as MantineCard, Image, Skeleton, Text } from "@mantine/core";
+import { Avatar, Card as MantineCard, Image, Text } from "@mantine/core";
 import useStyles from "./styles";
 
 interface CardProps {
@@ -38,9 +38,4 @@ export default function Card({ image, title, desc, id }: CardProps) {
       </Text>
     </MantineCard>
   );
-}
-
-export function SkeletonCard() {
-  const { classes } = useStyles();
-  return <Skeleton p="md" radius="md" className={classes.control} />;
 }
