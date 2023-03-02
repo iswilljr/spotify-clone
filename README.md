@@ -4,7 +4,7 @@ A basic spotify clone that uses Spotify Authentication and Spotify API
 
 ## Introduction
 
-A frontend clone project of the Spotify web player. Comsumes data from the Spotify API and tries to mimic the UI and frontend behaviours of the official Spotify web player as much as possible.
+A frontend clone project of the Spotify web player. Consumes data from the Spotify API and tries to mimic the UI and frontend behaviors of the official Spotify web player as much as possible.
 
 ## Installation
 
