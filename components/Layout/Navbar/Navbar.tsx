@@ -3,7 +3,7 @@ import { Navbar as MantineNavbar, ScrollArea } from "@mantine/core";
 import { HomeIcon, SearchIcon, LibraryIcon, NewIcon, LikedIcon } from "components/icons/NavIcons";
 import usePlaylists from "hooks/use-playlists";
 import { usePlaylistStore } from "lib/store";
-import NavItem, { NavItemProps } from "./Item/Item";
+import NavItem, { type NavItemProps } from "./Item/Item";
 import Logo from "./Logo";
 import useStyles from "./styles";
 

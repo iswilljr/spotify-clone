@@ -33,8 +33,8 @@ export default function Card({ image, title, desc, id }: CardProps) {
 
       <Text className="truncate">{title}</Text>
 
-      <Text size="sm" color="dimmed" style={{ overflowWrap: "anywhere" }}>
-        {desc ?? "descrip"}
+      <Text size="sm" color="dimmed" lineClamp={2} style={{ overflowWrap: "anywhere" }}>
+        {desc}
       </Text>
     </MantineCard>
   );

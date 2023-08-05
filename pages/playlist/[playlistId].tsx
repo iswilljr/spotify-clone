@@ -44,7 +44,7 @@ export default function Playlist() {
               <Avatar className={classes.image}>{playlist.name.charAt(0)}</Avatar>
             )}
             <div className={classes.playlistInfo}>
-              <Title order={1} className={cx(classes.title, "truncate")}>
+              <Title order={1} lineClamp={2} className={cx(classes.title, "")}>
                 {playlist.name}
               </Title>
               <div className={classes.playlistDesc}>
@@ -59,7 +59,7 @@ export default function Playlist() {
                         playlist.tracks.items.reduce((acc, item) => acc + (item.track?.duration_ms ?? 0), 0),
                         {
                           long: true,
-                        }
+                        },
                       )}
                     </span>
                   </span>

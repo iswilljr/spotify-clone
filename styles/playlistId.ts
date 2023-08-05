@@ -8,7 +8,6 @@ export default createStyles((theme) => ({
     paddingBottom: 16,
   },
   title: {
-    maxWidth: 750,
     marginBottom: 16,
     [theme.fn.largerThan("sm")]: { fontSize: "4rem" },
     [theme.fn.largerThan("md")]: { fontSize: "5rem" },

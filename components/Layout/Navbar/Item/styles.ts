@@ -12,7 +12,7 @@ export default createStyles((theme, { active, xs }: { active?: boolean; xs?: boo
     alignItems: "center",
     cursor: "pointer",
     gap: "16px",
-    height: xs ? 30 : 40,
+    minHeight: xs ? 30 : 40,
     padding: "0 16px",
     color: active ? "#fff" : "#b3b3b3",
     ":hover": {
