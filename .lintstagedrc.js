@@ -1,4 +1,4 @@
 module.exports = {
-  "*.{js,jsx,ts,tsx}": (filenames) => ["yarn typecheck", `yarn lint --fix ${filenames.join(" ")}`],
-  "*": (filenames) => `yarn prettier:write ${filenames.join(" ")}`,
+  "*.{js,jsx,ts,tsx}": (filenames) => ["pnpm typecheck", `pnpm eslint --cache --fix ${filenames.join(" ")}`],
+  "*": (filenames) => `pnpm prettier -wu ${filenames.join(" ")}`,
 };

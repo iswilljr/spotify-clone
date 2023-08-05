@@ -11,7 +11,7 @@ A frontend clone project of the Spotify web player. Consumes data from the Spoti
 ```bash
 git clone https://github.com/iswilljr/spotify-clone.git
 cd spotify-clone
-yarn
+pnpm i
 ```
 
 ### Env Variables
